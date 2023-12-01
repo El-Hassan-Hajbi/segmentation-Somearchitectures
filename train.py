@@ -64,8 +64,8 @@ if __name__ == '__main__':
 
     # initialize the UNet or HourGlass model
     #model = SimpleConv((3,16),(16,1))
-    #model = HourGlass((3,16,32,64),(64,32,16,1))
-    model = UNet((3,16,32,64),(64,32,16,8))
+    #model = HourGlass((3,16,32,64,128,256),(256,128,64,32,16,8))
+    model = UNet((3,16,32,64,128,256),(256,128,64,32,16,8))
     cnnet = model.to(config.DEVICE)
     print(model)
 
